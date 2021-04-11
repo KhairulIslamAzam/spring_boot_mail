@@ -14,7 +14,7 @@ import java.util.Properties;
 @Configuration
 public class EmailConfig {
     private final String username = "azamblackps606862@gmail.com";
-    private final String password = "pjgfsbppnjzavoiq";
+    private final String password = "********";
 
     public Session getSession(){
         Properties prop = new Properties();
