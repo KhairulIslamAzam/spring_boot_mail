@@ -8,7 +8,7 @@ import lombok.Setter;
 /**
  * @author Khairul Islam Azam
  * @created 10/04/2021 - 4:56 PM
- * @project IntelliJ IDEA
+ * @project email send with spring boot
  */
 
 @Setter
@@ -17,7 +17,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class EmailRequest {
     private String to;
-    private String from;
+//    private String from;
     private String subject;
     private String body;
     private String attachment;
