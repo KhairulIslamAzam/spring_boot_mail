@@ -24,7 +24,7 @@ public class EmailWithSpringBootApplication {
 //                "Testing smtp mail",
 //                "the whole mail is the test purpose of smtp mail sender");
 
-        emailSenderService.sendMailWithAttachment("azamblackps606862@gmail.com",
+        emailSenderService.sendMailWithAttachment("azamblackps6862@gmail.com",
                 "mkhairul.bs23@gmail.com",
                 "Testing smtp mail",
                 "the whole mail is the test purpose of smtp mail sender",
