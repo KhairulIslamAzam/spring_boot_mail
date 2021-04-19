@@ -32,15 +32,13 @@ public class EmailService {
     private final Logger logger = LoggerFactory.getLogger(EmailService.class);
 
     public MailResponse sendMailMultipart(String toEmail, String  fromAddress,
-                                          String subject, String message)  {
+                                          String subject, Map<String,String> model)  {
 
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
         MimeMessageHelper helper = null;
         MailResponse response = new MailResponse();
-        Map<String, String> model = null;
+
         try {
-            model = new HashMap<>();
-            model.put(toEmail,message);
 
             helper = new MimeMessageHelper(mimeMessage, true);
             Template t = config.getTemplate("email-template.ftl");
@@ -75,8 +73,8 @@ public class EmailService {
         return response;
     }
 
-    public MailResponse sendMail(String toEmail,String from, String subject, String message){
-        return sendMailMultipart(toEmail, from, subject, message);
+    public MailResponse sendMail(String toEmail,String from, String subject, Map<String,String> model){
+        return sendMailMultipart(toEmail, from, subject, model);
     }
 
 //    public MailResponse sendMail(String toEmail, String subject, String message, MultipartFile [] files){

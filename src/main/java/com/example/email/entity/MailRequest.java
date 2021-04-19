@@ -3,6 +3,8 @@ package com.example.email.entity;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Map;
+
 /**
  * @author Khairul Islam Azam
  * @created 11/04/2021 - 6:03 PM
@@ -13,9 +15,10 @@ import lombok.Setter;
 @Getter
 public class MailRequest {
 
-    private String name;
+    private String subject;
     private String to;
     private String from;
-    private String subject;
+    private Map<String, String> body;
+
 
 }
