@@ -1,0 +1,15 @@
+spring:
+      mail:
+          host: smtp.gmail.com
+          port: 587
+          username: azamblackps606862@gmail.com
+          password: pjgfsbppnjzavoiq
+          properties:
+                    mail:
+                        smtp:
+                            auth: true
+                            connectiontimeout: 5000
+                            timeout: 5000
+                            writetimeout: 500
+                            starttls:
+                                    enable: true

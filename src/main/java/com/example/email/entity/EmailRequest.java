@@ -1,9 +1,13 @@
 package com.example.email.entity;
 
+import com.fasterxml.jackson.databind.jsontype.impl.StdTypeResolverBuilder;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.Serializable;
 
 /**
  * @author Khairul Islam Azam
@@ -15,10 +19,12 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class EmailRequest {
-    private String to;
-//    private String from;
+public class EmailRequest implements Serializable {
+    private String toMail;
+    private String fromMail;
     private String subject;
     private String body;
-    private String attachment;
+//    private String path;
+    //  private List<Byte[]> attachment;
+//    private MultipartFile [] files;
 }
